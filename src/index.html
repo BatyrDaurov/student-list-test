@@ -1,71 +1,58 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>Учет студентов</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  
-  <h2>Список студентов</h2>
-  <table border="1">
-    <thead>
-      <tr>
-        <th>ФИО</th>
-        <th>Город</th>
-        <th>Дата рождения</th>
-        <th>Отделение</th>
-        <th>Балл аттестата</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Иванов Иван Иванович</td>
-        <td>Москва</td>
-        <td>01.01.2000</td>
-        <td>Программирование</td>
-        <td>4.5</td>
-      </tr>
-      <tr>
-        <td>Петров Петр Петрович</td>
-        <td>Санкт-Петербург</td>
-        <td>02.02.2004</td>
-        <td>Дизайн</td>
-        <td>4.5</td>
-      </tr>
-      <tr>
-        <td>Сидоров Сидор Сидорович</td>
-        <td>Казань</td>
-        <td>03.03.2006</td>
-        <td>Право</td>
-        <td>4.9</td>
-      </tr>
-    </tbody>
-  </table>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <h2>Список студентов</h2>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>ФИО</th>
+          <th>Город</th>
+          <th>Дата рождения</th>
+          <th>Отделение</th>
+          <th>Балл аттестата</th>
+        </tr>
+      </thead>
+      <tbody id="data">
+        <tr>
+          <td colspan="5">Пуста...</td>
+        </tr>
+      </tbody>
+    </table>
 
-  <h2>Добавить нового студента</h2>
-  <form>
-    <label for="fio">ФИО:</label>
-    <input type="text" id="fio" name="fio"><br><br>
+    <h2>Добавить нового студента</h2>
+    <form>
+      <label for="fio">ФИО:</label>
+      <input type="text" id="fio" name="fio" /><br /><br />
 
-    <label for="city">Город:</label>
-    <input type="text" id="city" name="city"><br><br>
+      <label for="city">Город:</label>
+      <input type="text" id="city" name="city" /><br /><br />
 
-    <label for="birthdate">Дата рождения:</label>
-    <input type="date" id="birthdate" name="birthdate"><br><br>
+      <label for="birthdate">Дата рождения:</label>
+      <input type="date" id="birthdate" name="birthdate" /><br /><br />
 
-    <label for="department">Отделение:</label>
-    <select id="department" name="department">
-      <option value="programming">Программирование</option>
-      <option value="design">Дизайн</option>
-      <option value="economics">Право</option>
-    </select><br><br>
+      <label for="department">Отделение:</label>
+      <select id="department" name="department">
+        <option value="programming">Программирование</option>
+        <option value="design">Дизайн</option>
+        <option value="economics">Право</option></select
+      ><br /><br />
 
-    <label for="grade">Балл аттестата:</label>
-    <input type="number" id="grade" name="grade" step="0.1" min="1" max="5"><br><br>
+      <label for="grade">Балл аттестата:</label>
+      <input
+        type="number"
+        id="grade"
+        name="grade"
+        step="0.1"
+        min="1"
+        max="5"
+      /><br /><br />
 
-    <input type="submit" value="Добавить">
-  </form>
-
-</body>
+      <input type="submit" value="Добавить" />
+    </form>
+    <script src="./js/script.js"></script>
+  </body>
 </html>
-
