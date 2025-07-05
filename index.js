@@ -11,6 +11,10 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "src/index.html"));
 });
 
+app.get("/student/:id", (req, res) => {
+  res.sendFile(path.join(__dirname, "src/student-info.html"));
+});
+
 app.listen(port, () => {
   console.log(`Сайт запущем на порте: ${port}!`);
 });

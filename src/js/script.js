@@ -9,7 +9,7 @@ const data = fetch("https://admissioncampaign-l2u0.onrender.com/api/students")
     data.forEach((student) => {
       /* итерируюсь по массиву студентов (по тому что отформатировали then((res) => res.json())) */
       const str = `
-              <tr>
+              <tr class="link-to-student" data-studentid="${student.id}">
                 <td>${student.surname} ${student.name} ${student.patronymic}</td>
                 <td>${student.city}</td>
                 <td>${student.birthDay}</td>
@@ -21,4 +21,13 @@ const data = fetch("https://admissioncampaign-l2u0.onrender.com/api/students")
       /* добавляю строку в html */
       html.innerHTML += str;
     });
-  });
+  })
+  .then(() =>
+    document.querySelectorAll(".link-to-student").forEach((student) => {
+      student.addEventListener("click", () => {
+        location.href =
+          document.baseURI +
+          `student/${student.getAttribute("data-studentid")}`;
+      });
+    })
+  );
