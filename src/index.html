@@ -24,7 +24,7 @@
     </table>
 
     <h2>Добавить нового студента</h2>
-    <form>
+    <form method="post" id="form-student">
       <label for="fio">ФИО:</label>
       <input type="text" id="fio" name="fio" /><br /><br />
 
@@ -35,11 +35,7 @@
       <input type="date" id="birthdate" name="birthdate" /><br /><br />
 
       <label for="department">Отделение:</label>
-      <select id="department" name="department">
-        <option value="programming">Программирование</option>
-        <option value="design">Дизайн</option>
-        <option value="economics">Право</option></select
-      ><br /><br />
+      <input type="text" id="department" name="department" /><br /><br />
 
       <label for="grade">Балл аттестата:</label>
       <input
@@ -51,7 +47,7 @@
         max="5"
       /><br /><br />
 
-      <input type="submit" value="Добавить" />
+      <button id="add-form-button">Добавить</button>
     </form>
     <script src="./js/script.js"></script>
   </body>
